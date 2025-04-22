@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        main {
+            flex: 1;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+
+        .gif-container {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: 0;
+            margin-bottom: 50px;
+        }
+
+        .gif-container img {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+            animation: mixGIFs 12s ease-in-out infinite;
+            opacity: 0;
+        }
+
+        .gif-container img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .gif-container img:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        .gif-container img:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        .gif-container img:nth-child(4) {
+            animation-delay: 9s;
+        }
+
+        .gif-container img:nth-child(5) {
+            animation-delay: 12s;
+        }
+
+        .gif-container img:nth-child(6) {
+            animation-delay: 15s;
+        }
+
+
+        @keyframes mixGIFs {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(1.1) translateX(0) translateY(0);
+            }
+
+            25% {
+                opacity: 1;
+                transform: scale(1) translateX(-10%) translateY(-10%);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1) translateX(10%) translateY(10%);
+            }
+
+            75% {
+                opacity: 0.5;
+                transform: scale(0.9) translateX(-5%) translateY(5%);
+            }
+        }
+
+        .custom-card {
+            background: linear-gradient(145deg, #1a3a6e, #d36d87);
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 15px 0 50px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            color: #f1f1f1;
+            min-height: 300px;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(145deg, #1a2d5d, #e188a2);
+        }
+
+        .custom-card img {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+
+        .custom-card .card-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .custom-card .card-text {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: rgb(194, 53, 53);
+            padding: 2px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer-left img {
+            width: 150px;
+            margin-bottom: 5px;
+        }
+
+        .footer-right h4 {
+            margin-bottom: 5px;
+        }
+
+        .footer-right a {
+            color: rgb(138, 137, 137);
+            text-decoration: none;
+            margin: 5px 0;
+            font-size: 14px;
+            display: block;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .footer-right a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #ff0000;
+            transform: scale(1.1);
+        }
+
+        .footer-bottom p {
+            font-size: 12px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        .full-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .movie-title {
+            font-family: 'Great Vibes', cursive;
+            background: linear-gradient(90deg, navy, pink);
+            font-size: 4.5rem;
+            font-weight: 400;
+            margin: 0;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 153, 204, 0.6);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(0, 31, 77, 0.8);
+            }
+        }
+
+        .movie-tagline {
+            font-size: 2rem;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #fff;
+            animation: typing 4s steps(40, end), blink 0.6s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .enter-button {
+            padding: 15px 35px;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #49d0ff, #a04470, #ffae00);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.6);
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .enter-button:hover {
+            background: linear-gradient(135deg, #ffae00, #ff007b, #49d0ff);
+            transform: scale(1.2);
+            box-shadow: 0 25px 60px rgba(255, 255, 255, 1);
+        }
+
+        .info-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .content-left {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-right {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-left img,
+        .content-right img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .info-section.reverse .content-left {
+            order: 2;
+        }
+
+        .info-section.reverse .content-right {
+            order: 1;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-left img:hover,
+        .content-right img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+            .info-section {
+                animation: fadeInUp 1s forwards;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-wrapper {
+            padding-bottom: 120px;
+        }
+
+        .quote-box {
+            position: relative;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-color: linear-gradient(to right, #000000, #6a5acd, #ff69b4);
+            color: #f8f2f2;
+            font-size: 1.5rem;
+            font-style: italic;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .quote-box.show {
+            opacity: 1;
+            animation: fadeInQuote 2s ease-out;
+        }
+
+        @keyframes fadeInQuote {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="gif-container">
+        <img src="https://i.pinimg.com/originals/ce/a8/71/cea871bb4873a3553b57340f6805b920.gif" alt="Movie GIF 1">
+        <img src="https://assets-global.website-files.com/616e938268c8f0a92cb2b540/643861dc2aea7d4b6d6129c0_image10.gif"
+            alt="Movie GIF 2">
+        <img src="https://media.giphy.com/media/xTk9ZGxg0D3FhsihwI/giphy.gif" alt="Movie GIF 3">
+        <img src="https://media.giphy.com/media/6EpecYmJhUaaUtoC9t/giphy.gif" alt="Movie GIF 4">
+        <img src="https://78.media.tumblr.com/8e895859aa3da46c5241619fcf032de3/tumblr_pafkqfLSbT1qkz08qo1_540.gif"
+            alt="Movie GIF 5">
+        <img src="https://i.pinimg.com/originals/8f/b8/f3/8fb8f35fb47f73d0a48a4dba68c85c8d.gif" alt="Movie GIF 6">
+    </div>
+
+    <div class="quote-box">
+        <p class="quote-text">"Movies are the memories of our lifetime. We need to keep them alive." - Walt Disney</p>
+    </div>
+
+    <div class="full-screen">
+        <h1 class="movie-title">Cinephile Corner</h1>
+        <p class="movie-tagline">Dive into Cinematic Bliss</p>
+        <button class="enter-button" onclick="enterSite()">Dive In</button>
+    </div>
+
+    <div class="info-section">
+        <div class="content-left">
+            <img src="https://3.bp.blogspot.com/-m1t3sA8yZmU/UHvzhfMMXVI/AAAAAAAABGE/qKZwtOL1Nmg/s1600/d5.jpg"
+                alt="Movie Image">
+        </div>
+        <div class="content-right">
+            <h2>What is Cinephile Corner?</h2>
+            <p>Cinephile Corner is a comprehensive platform designed for movie lovers who want more than just
+                entertainment.
+                It's a hub for cinephiles to discover, discuss, and enjoy films from all genres — from timeless classics
+                to the latest blockbusters.</p>
+        </div>
+    </div>
+
+    <div class="info-section second-section">
+        <div class="content-left">
+            <h2>Is Cinephile Corner Safe?</h2>
+            <p>Yes! Cinephile Corner prioritizes user safety and privacy. We employ state-of-the-art encryption and
+                security protocols to protect your personal data and ensure a safe browsing experience. Your security is
+                our top concern.</p>
+        </div>
+        <div class="content-right">
+            <img src="https://img.freepik.com/premium-photo/3d-security-safe-icon_949611-938.jpg" alt="Safe Platform">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="content-left">
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/574/383/desktop-wallpaper-movie-poster-mix-of-movies.jpg"
+                alt="Movies Collection">
+        </div>
+        <div class="content-right">
+            <h2>How Do I Discover Movies?</h2>
+            <p>At Cinephile Corner, discovering new movies has never been easier. Our smart recommendation system
+                curates suggestions based on your viewing habits, favorite genres, and past ratings. With access to an
+                ever-expanding library of films, there's always something new to watch.</p>
+        </div>
+    </div>
+
+    <div class="info-section second-section">
+        <div class="content-left">
+            <h2>Can I Watch Movies with Friends?</h2>
+            <p>Absolutely! One of the most exciting features on Cinephile Corner is the "Watch Together" feature. This
+                allows you to sync up your movie experience with friends and family, no matter where they are. You can
+                chat, share reactions, and discuss the film in real-time.</p>
+        </div>
+        <div class="content-right">
+            <img src="https://media.istockphoto.com/id/1010001542/photo/group-of-young-people-in-the-cinema-watching-a-movie.jpg?s=612x612&w=0&k=20&c=s2RwsXo-iA6RlTPI5QYUBFzZz98xoL7obFrOgv1w678="
+                alt="Watch Together">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="content-left">
+            <img src="https://static.vecteezy.com/system/resources/previews/026/718/327/non_2x/illustration-image-nature-and-sustainability-eco-friendly-living-and-conservation-concept-art-of-earth-and-animal-life-in-different-environments-generative-ai-illustration-free-photo.jpg"
+                alt="Movie Communities">
+        </div>
+        <div class="content-right">
+            <h2>Are There Movie Communities?</h2>
+            <p>Yes! You can join movie fan communities to discuss your favorite films, share opinions, and even join
+                themed watch parties. Be part of a passionate movie-loving community!</p>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <h3 class="card-title">Exclusive Movies</h3>
+                        <p class="card-text">Watch the latest blockbusters exclusively on our platform.</p>
+                        <img src="https://static.vecteezy.com/system/resources/previews/018/969/209/original/cute-3d-characters-creative-ideas-for-birthday-or-gift-presents-free-png.png"
+                            alt="Exclusive Movies Icon" class="card-img-bottom">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <h3 class="card-title">Curated Playlists</h3>
+                        <p class="card-text">Discover handpicked playlists tailored to your taste.</p>
+                        <img src="https://static.vecteezy.com/system/resources/previews/010/175/293/original/3d-rendering-of-cute-icon-illustration-gallery-approved-png.png"
+                            alt="Curated Playlists Icon" class="card-img-bottom">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <h3 class="card-title">Live Premieres</h3>
+                        <p class="card-text">Join live movie premieres with your favorite stars.</p>
+                        <img src="https://static.vecteezy.com/system/resources/previews/014/529/549/original/cute-panda-with-heart-cute-animal-3d-rendering-png.png"
+                            alt="Live Premieres Icon" class="card-img-bottom">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card">
+                        <h3 class="card-title">Family Time</h3>
+                        <p class="card-text">Enjoy family-friendly movies and shows together.</p>
+                        <img src="https://static.vecteezy.com/system/resources/previews/026/976/803/original/3d-icon-cute-happy-young-family-dad-mom-daughter-and-son-together-illustration-in-cartoon-style-on-isolated-transparent-background-generative-ai-png.png"
+                            alt="Family Time Icon" class="card-img-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom container">
+            <div class="social-media d-flex justify-content-center">
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                <a href="https://x.com/" class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+            </div>
+            <p>&copy; 2024 Cinephile Corner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const mainContent = document.getElementById('main-content');
+            if (window.scrollY > 100) {
+                mainContent.style.opacity = 1;
+            }
+        });
+
+        function enterSite() {
+            window.location.href = "demo.html";
+        }
+
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.info-section');
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionPosition < windowHeight * 0.8) {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        window.addEventListener('load', function () {
+            const quoteBox = document.querySelector('.quote-box');
+            setTimeout(function () {
+                quoteBox.classList.add('show');
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
