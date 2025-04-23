@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Movies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #181818;
+            padding: 10px;
+            color: #f39c12;
+        }
+
+        .home-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            margin-right: 20px;
+            transition: color 0.3s;
+        }
+
+        .home-icon:hover {
+            color: #e74c3c;
+        }
+
+        .upcoming-section {
+            padding: 20px;
+            background-color: #181818;
+            color: #fff;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .upcoming-section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f39c12;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .upcoming-section h2:hover {
+            transform: scale(1.1);
+        }
+
+        .movie-card {
+            display: flex;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            background: #202020;
+            transition: transform 0.3s, box-shadow 0.3s;
+            align-items: center;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(243, 156, 18, 0.4);
+        }
+
+        .movie-poster img {
+            width: 100px;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        .movie-info {
+            margin-left: 15px;
+            flex: 1;
+        }
+
+        .movie-info h3 {
+            margin: 0;
+            color: #f39c12;
+            font-size: 1.5em;
+        }
+
+        .movie-info p {
+            margin: 5px 0;
+        }
+
+        .icon-container {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .icon-container i {
+            color: #f39c12;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+
+        .icon-container i:hover {
+            color: #e74c3c;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #e64a19;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>  
+</head>
+<body>
+    <a href="index.html" class="back-button">Back</a>
+    <div class="header">
+        <a href="homepage.html"><i class="fas fa-home home-icon" title="Home"></i></a>
+        <h2>Upcoming Movies</h2>
+    </div>
+    <div class="upcoming-section">
+        <div class="movie-card">
+            <div class="movie-poster">
+                <img src="https://tinyurl.com/bdd4huy3" alt="Blood, White & Blue">
+            </div>
+            <div class="movie-info">
+                <h3>Blood, White & Blue</h3>
+                <p>Release Year: 2025</p>
+                <p>Genre: Action, Drama</p>
+                <p>Synopsis: In a world torn apart by war, a soldier must choose between duty and family as he navigates through the chaos.</p>
+                <p>Cast: John Doe, Jane Smith, and Alex Brown</p>
+            </div>
+            <div class="icon-container">
+                <i class="fas fa-bookmark" title="Bookmark"></i>
+                <i class="fas fa-heart" title="Like"></i>
+                <i class="fas fa-save" title="Save"></i>
+            </div>
+        </div>
+        <div class="movie-card">
+            <div class="movie-poster">
+                <img src="https://images.thedirect.com/media/photos/landb.jpg" alt="The Land Before Time">
+            </div>
+            <div class="movie-info">
+                <h3>The Land Before Time</h3>
+                <p>Release Year: 2025</p>
+                <p>Genre: Adventure, Animation</p>
+                <p>Synopsis: Join Littlefoot and his friends as they embark on a new adventure in a prehistoric world filled with danger and wonder.</p>
+                <p>Cast: A mix of talented voice actors returning to their beloved roles.</p>
+            </div>
+            <div class="icon-container">
+                <i class="fas fa-bookmark" title="Bookmark"></i>
+                <i class="fas fa-heart" title="Like"></i>
+                <i class="fas fa-save" title="Save"></i>
+            </div>
+        </div>
+        <div class="movie-card">
+            <div class="movie-poster">
+                <img src="https://tinyurl.com/4sbubu8w" alt="Armageddon">
+            </div>
+            <div class="movie-info">
+                <h3>Armageddon</h3>
+                <p>Release Year: 2025</p>
+                <p>Genre: Sci-Fi, Action</p>
+                <p>Synopsis: As a massive asteroid threatens Earth, a team of unlikely heroes must come together to save humanity.</p>
+                <p>Cast: Bruce Willis, Ben Affleck, and Liv Tyler.</p>
+            </div>
+            <div class="icon-container">
+                <i class="fas fa-bookmark" title="Bookmark"></i>
+                <i class="fas fa-heart" title="Like"></i>
+                <i class="fas fa-save" title="Save"></i>
+            </div>
+        </div>
+        <div class="movie-card">
+            <div class="movie-poster">
+                <img src="https://tinyurl.com/mue3pvhu" alt="Apocalypse">
+            </div>
+            <div class="movie-info">
+                <h3>Apocalypse</h3>
+                <p>Release Year: 2025</p>
+                <p>Genre: Horror, Thriller</p>
+                <p>Synopsis: A group of friends find themselves trapped in a nightmare as they uncover a dark secret in an abandoned town.</p>
+                <p>Cast: Emma Stone, Ryan Gosling, and Chris Pratt.</p>
+            </div>
+            <div class="icon-container">
+                <i class="fas fa-bookmark" title="Bookmark"></i>
+                <i class="fas fa-heart" title="Like"></i>
+                <i class="fas fa-save" title="Save"></i>
+            </div>
+        </div>
+    </div>
+    <script>
+       window.onload = function() {
+        const bookmarkIcons = document.querySelectorAll('.fa-bookmark');
+        const likeIcons = document.querySelectorAll('.fa-heart');
+        const saveIcons = document.querySelectorAll('.fa-save');
+        
+        bookmarkIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                alert("Your movie is bookmarked!");
+            });
+        });
+        likeIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                alert("Thank you for liking!");
+            });
+        });
+        saveIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                alert("Your movie is saved!");
+            });
+        });
+    };
+    </script>
+</body>
+</html>
