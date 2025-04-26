@@ -55,6 +55,8 @@ Ready to explore **Cinephile Corner**? Here’s how to get started:
 
 Here's a quick glance at the folder structure for easier navigation:
 
+  ```bash
+
 Cinephile-Corner/
 │
 ├── assets/
@@ -67,6 +69,8 @@ Cinephile-Corner/
 ├── pages/                  # HTML pages (index.html, subscription.html, etc.)
 ├── README.md               # This file
 └── .gitignore              # Ignored files for Git
+
+  ```
 
 ---
 
@@ -90,15 +94,15 @@ We welcome contributions! If you'd like to improve Cinephile Corner or add new f
 
 - How to Contribute:
 
-  1. Fork the repository.
+1. Fork the repository.
 
-  2. Create your branch (git checkout -b feature-name).
+2. Create your branch (git checkout -b feature-name).
 
-  3. Commit your changes (git commit -am 'Add some feature').
+3. Commit your changes (git commit -am 'Add some feature').
 
-  4. Push to your branch (git push origin feature-name).
+4. Push to your branch (git push origin feature-name).
 
-  5. Open a pull request.
+5. Open a pull request.
 
 ---
 
