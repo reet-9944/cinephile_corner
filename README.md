@@ -94,15 +94,16 @@ We welcome contributions! If you'd like to improve Cinephile Corner or add new f
 
 - How to Contribute:
 
-   1. Fork the repository.
 
-   2. Create your branch (git checkout -b feature-name).
+1. Fork the repository.
 
-   3. Commit your changes (git commit -am 'Add some feature').
+2. Create your branch (git checkout -b feature-name).
 
-   4. Push to your branch (git push origin feature-name).
+3. Commit your changes (git commit -am 'Add some feature').
 
-   5. Open a pull request.
+4. Push to your branch (git push origin feature-name).
+
+5. Open a pull request.
 
 ---
 
