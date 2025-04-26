@@ -32,10 +32,14 @@ Ready to explore **Cinephile Corner**? Here’s how to get started:
    ```bash
    git clone https://github.com/your-username/Cinephile-Corner.git
 
+---
+
 ### 2. **Install Dependencies (if applicable)**:
    - Make sure you have Node.js installed for any JavaScript functionality.
    - Install necessary libraries (like Font Awesome) using:
    ```npm install
+
+---   
 
 ### 3. **Run Locally**:
    - Open index.html in your browser to see the magic unfold!
