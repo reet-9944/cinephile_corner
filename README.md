@@ -32,17 +32,26 @@ Ready to explore **Cinephile Corner**? Here’s how to get started:
    ```bash
    git clone https://github.com/your-username/Cinephile-Corner.git
 
-2. Install Dependencies (if applicable):
+   ```
+
+---
+
+### 2. **Install Dependencies (if applicable)**:
    - Make sure you have Node.js installed for any JavaScript functionality.
    - Install necessary libraries (like Font Awesome) using:
-   ```npm install
+   ```bash
+   npm install
 
+   ```
 
-3. Run Locally:
+---   
+
+### 3. **Run Locally**:
    - Open index.html in your browser to see the magic unfold!
 
+---
 
-Folder Structure 🗂️
+## Folder Structure 🗂️
 
 Here's a quick glance at the folder structure for easier navigation:
 
@@ -61,7 +70,7 @@ Cinephile-Corner/
 
 ---
 
-Technologies Used ⚙️
+## Technologies Used ⚙️
 
 - HTML: For the core structure of the website.
 
@@ -75,7 +84,7 @@ Technologies Used ⚙️
 
 ---
 
-Contributing 🤝
+## Contributing 🤝
 
 We welcome contributions! If you'd like to improve Cinephile Corner or add new features, feel free to open an issue or submit a pull request.
 
@@ -93,4 +102,4 @@ We welcome contributions! If you'd like to improve Cinephile Corner or add new f
 
 ---
 
-🎥🍿 Enjoy the show, and welcome to Cinephile Corner! 🎥🍿
+## Enjoy the show, and welcome to Cinephile Corner! 🎥🍿
