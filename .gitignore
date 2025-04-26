@@ -33,3 +33,6 @@ Thumbs.db
 
 # Ignore environment files (e.g., .env for storing sensitive data)
 .env
+
+# ignore this link
+.github/workflows/dynamic/pages/pages-build-deployment.yml
