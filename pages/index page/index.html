@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="shortcut icon" href="images/movie icon.jpg"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Movie Website</title>
+
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <img src="https://th.bing.com/th/id/OIP.Y1VjnLi3E7Ocg3iW3Kp4BQHaCS?rs=1&pid=ImgDetMain"/>
+        </a>
+        <input type="checkbox" class="menu-btn" id="menu-btn"/>
+        <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+        </label>
+        <ul class="menu">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="#" onclick="openLogin()">Log In</a></li>
+            <li><a href="#" onclick="openSignup()">Sign Up</a></li>
+            <li><a href="subscription.html">Subscription</a></li>
+            <li><a href="upcoming.html">Upcoming</a></li>
+        </ul>
+      
+
+        <div class="search">
+            <input type="text" placeholder="search.." id="searchInput" oninput="filterMovies()"/> 
+            <i class="fa fa-search" aria-hidden="true" onclick="filterMovies()"></i>
+        </div>
+    </nav>
+        <div id="noResultMessage" style="display: none; position:fixed;bottom:50%;transform: translateX(-50%) ; background-color: red;color: white; padding: 10px;">
+            Movie Not Found</div>
+    
