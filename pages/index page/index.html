@@ -1,208 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css"/>
-    <link rel="shortcut icon" href="images/movie icon.jpg"/>
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Movie Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="shortcut icon" href="images/movie icon.jpg" />
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <title>Movie Website</title>
 
 </head>
 
 <body>
-    <nav>
-        <a href="#" class="logo">
-            <img src="https://th.bing.com/th/id/OIP.Y1VjnLi3E7Ocg3iW3Kp4BQHaCS?rs=1&pid=ImgDetMain"/>
-        </a>
-        <input type="checkbox" class="menu-btn" id="menu-btn"/>
-        <label class="menu-icon" for="menu-btn">
-            <span class="nav-icon"></span>
-        </label>
-        <ul class="menu">
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="#" onclick="openLogin()">Log In</a></li>
-            <li><a href="#" onclick="openSignup()">Sign Up</a></li>
-            <li><a href="subscription.html">Subscription</a></li>
-            <li><a href="upcoming.html">Upcoming</a></li>
-        </ul>
-      
-
-        <div class="search">
-            <input type="text" placeholder="search.." id="searchInput" oninput="filterMovies()"/> 
-            <i class="fa fa-search" aria-hidden="true" onclick="filterMovies()"></i>
-        </div>
-    </nav>
-        <div id="noResultMessage" style="display: none; position:fixed;bottom:50%;transform: translateX(-50%) ; background-color: red;color: white; padding: 10px;">
-            Movie Not Found</div>
-      
-      
-
-    <section id="main">
-          <h1 class="showcase-heading">Showcase</h1>
-          <div class="movie-scroll">
-            <div class="scroll-container" id="showcaseScroll">
-           <ul id="autoWidth" class="cs-hidden">
-        <li class="item-a"  data-title="Bean and Beast">
-            <div class="showcase-box">
-                <a href="vision.html">
-                    <img src="images/s-3.jpg" alt="bean and beast">
-                </a>
-            </div>
-        </li>
-        <li class="item-b"  data-title="brave">
-            <div class="showcase-box">
-                <a href="vision.html">
-                    <img src="images/brave.jpg" alt="brave">
-                </a>    
-            </div>
-        </li>
-        <li class="item-c"  data-title="Oblivion">
-            <div class="showcase-box">
-                <a href="vision.html">
-                    <img src="images/oblivion.jpg" alt="oblivion">
-                </a>
-            </div>
-        </li>
-        <li class="item-d" data-title="Cabin">
-            <div class="showcase-box">
-                <a href="vision.html">
-                    <img src="images/cabin.jpg" alt="cabin">
-                </a>
-            </div>
-        </li>
-        <li class="item-e" data-title="Forest">
-            <div class="showcase-box">
-                <a href="vision.html">
-                <img src="images/forest.jpg" />
-                </a>
-            </div>
-        </li>
+  <nav>
+    <a href="#" class="logo">
+      <img src="https://th.bing.com/th/id/OIP.Y1VjnLi3E7Ocg3iW3Kp4BQHaCS?rs=1&pid=ImgDetMain" />
+    </a>
+    <input type="checkbox" class="menu-btn" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn">
+      <span class="nav-icon"></span>
+    </label>
+    <ul class="menu">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="#" onclick="openLogin()">Log In</a></li>
+      <li><a href="#" onclick="openSignup()">Sign Up</a></li>
+      <li><a href="subscription.html">Subscription</a></li>
+      <li><a href="upcoming.html">Upcoming</a></li>
     </ul>
-</div>
-</div>
+
+
+    <div class="search">
+      <input type="text" placeholder="search.." id="searchInput" oninput="filterMovies()" />
+      <i class="fa fa-search" aria-hidden="true" onclick="filterMovies()"></i>
+    </div>
+  </nav>
+  <div id="noResultMessage"
+    style="display: none; position:fixed;bottom:50%;transform: translateX(-50%) ; background-color: red;color: white; padding: 10px;">
+    Movie Not Found</div>
+
+
+
+  <section id="main">
+    <h1 class="showcase-heading">Showcase</h1>
+    <div class="movie-scroll">
+      <div class="scroll-container" id="showcaseScroll">
+        <ul id="autoWidth" class="cs-hidden">
+          <li class="item-a" data-title="Bean and Beast">
+            <div class="showcase-box">
+              <a href="vision.html">
+                <img src="images/s-3.jpg" alt="bean and beast">
+              </a>
+            </div>
+          </li>
+          <li class="item-b" data-title="brave">
+            <div class="showcase-box">
+              <a href="vision.html">
+                <img src="images/brave.jpg" alt="brave">
+              </a>
+            </div>
+          </li>
+          <li class="item-c" data-title="Oblivion">
+            <div class="showcase-box">
+              <a href="vision.html">
+                <img src="images/oblivion.jpg" alt="oblivion">
+              </a>
+            </div>
+          </li>
+          <li class="item-d" data-title="Cabin">
+            <div class="showcase-box">
+              <a href="vision.html">
+                <img src="images/cabin.jpg" alt="cabin">
+              </a>
+            </div>
+          </li>
+          <li class="item-e" data-title="Forest">
+            <div class="showcase-box">
+              <a href="vision.html">
+                <img src="images/forest.jpg" />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="latest">
     <h2 class="latest-heading">Most-Popular</h2>
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="card-container" data-title="One Piece" data-video="one piece.mp4">
-        <div class="movie-title">One Piece</div>
-        <div class="card">
-          <img src="one.jpg" alt="One Piece">
-          <div class="movie-number">01</div>
-          <div class="popup-info">
-            <strong>One Piece</strong><br>
-            <div class="movie-release">Release Date: 1999</div>
-            <div class="movie-genre">Genre: Adventure, Fantasy</div>
-            <div class="movie-duration">Duration: 22 min per episode</div>
-            
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="card-container" data-title="One Piece" data-video="one piece.mp4">
+          <div class="movie-title">One Piece</div>
+          <div class="card">
+            <img src="one.jpg" alt="One Piece">
+            <div class="movie-number">01</div>
+            <div class="popup-info">
+              <strong>One Piece</strong><br>
+              <div class="movie-release">Release Date: 1999</div>
+              <div class="movie-genre">Genre: Adventure, Fantasy</div>
+              <div class="movie-duration">Duration: 22 min per episode</div>
+
+            </div>
           </div>
         </div>
+        <div class="card-container" data-title="Bunny" data-video="gif/bunny.mp4">
+          <div class="movie-title">Bunny</div>
+          <div class="card">
+            <img src="images/bunny.jpg" alt="Bunny">
+            <div class="movie-number">02</div>
+            <div class="popup-info">
+              <strong>Bunny</strong><br>
+              <div class="movie-release">Release Date: 2020</div>
+              <div class="movie-genre">Genre: Adventure, Comedy</div>
+              <div class="movie-duration">Duration: 1h 30m</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-container" data-title="Frozen" data-video="gif/frozen.mp4">
+          <div class="movie-title">Frozen</div>
+          <div class="card">
+            <img src="images/frozen.jpg" alt="Frozen">
+            <div class="movie-number">03</div>
+            <div class="popup-info">
+              <strong>Frozen</strong><br>
+              <div class="movie-release">Release Date: 2013</div>
+              <div class="movie-genre">Genre: Animation, Adventure</div>
+              <div class="movie-duration">Duration: 1h 42m</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-container" data-title="Veronica" data-video="conjuring.mp4">
+          <div class="movie-title">Veronica</div>
+          <div class="card">
+            <img src="images/veronica.jpg" alt="Veronica">
+            <div class="movie-number">04</div>
+            <div class="popup-info">
+              <strong>Veronica</strong><br>
+              <div class="movie-release">Release Date: 2017</div>
+              <div class="movie-genre">Genre: Horror, Mystery</div>
+              <div class="movie-duration">Duration: 1h 45m</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-container" data-title="One piece" data-video="one piece.mp4">
+          <div class="movie-title">One Piece</div>
+          <div class="card">
+            <img src="one.jpg" alt="One Piece">
+            <div class="movie-number">01</div>
+            <div class="popup-info">
+              <strong>One Piece</strong><br>
+              <div class="movie-release">Release Date: 1999</div>
+              <div class="movie-genre">Genre: Adventure, Fantasy</div>
+              <div class="movie-duration">Duration: 22 min per episode</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-container" data-title="Bunny" data-video="gif/bunny.mp4">
+          <div class="movie-title">Bunny</div>
+          <div class="card">
+            <img src="images/bunny.jpg" alt="Bunny">
+            <div class="movie-number">02</div>
+            <div class="popup-info">
+              <strong>Bunny</strong><br>
+              <div class="movie-release">Release Date: 2020</div>
+              <div class="movie-genre">Genre: Adventure, Comedy</div>
+              <div class="movie-duration">Duration: 1h 30m</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-container" data-title="Frozen" data-video="gif/frozen.mp4">
+          <div class="movie-title">Frozen</div>
+          <div class="card">
+            <img src="images/frozen.jpg" alt="Frozen">
+            <div class="movie-number">03</div>
+            <div class="popup-info">
+              <strong>Frozen</strong><br>
+              <div class="movie-release">Release Date: 2013</div>
+              <div class="movie-genre">Genre: Animation, Adventure</div>
+              <div class="movie-duration">Duration: 1h 42m</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-container" data-title="Veronica" data-video="conjuring.mp4">
+          <div class="movie-title">Veronica</div>
+          <div class="card">
+            <img src="images/veronica.jpg" alt="Veronica">
+            <div class="movie-number">04</div>
+            <div class="popup-info">
+              <strong>Veronica</strong><br>
+              <div class="movie-release">Release Date: 2017</div>
+              <div class="movie-genre">Genre: Horror, Mystery</div>
+              <div class="movie-duration">Duration: 1h 45m</div>
+
+            </div>
+          </div>
+        </div>
+  </section>
+  <div class="nav-container">
+    <button class="nav-button prev" onclick="scrollCarousel(-1)"></button>
+    <button class="nav-button next" onclick="scrollCarousel(1)"></button>
+  </div>
+  </div>
+
+  <section id="latest">
+    <h2 class="latest-heading">Latest Movies</h2>
+    <div class="movie-scroll">
+      <div class="scroll-container" id="latestScroll">
+        <ul id="autoWidth2" class="cs-hidden">
+
+          <li class="item-a" data-title="Insidious 2011" data-video="conjuring.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/insidious.jpg" alt="insidious">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Insidious 2011</strong>
+                <p>Horror</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-b" data-title="Avatar 2009" data-video="conjuring.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/avatar.jpg" alt="avatar">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Avatar 2009</strong>
+                <p>Comedy</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-c" data-title="Black Demon 2023" data-video="conjuring.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/bg-the-black-demon.jpeg" alt="bg-the-black-demon">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Black Demon 2023</strong>
+                <p>Horror</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-d" data-title="Gravity 2013" data-video="conjuring.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/gravity.jpg" alt="gravity">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Gravity 2013</strong>
+                <p>Sci-Fi</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-e" data-title="Inside Out 2 2023" data-video="conjuring.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/inside.jpg" alt="inside">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Inside Out 2 2023</strong>
+                <p>Comedy</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-f" data-title="Veronica 2021" data-video="gif/frozen.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/veronica.jpg" alt="veronica">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Veronica 2021</strong>
+                <p>Horror</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-g" data-title="Conjuring 2013" data-video="conjuring.mp4">
+            <div class="latest-box">
+
+              <div class="latest-b-img">
+                <img src="images/cnzurng.jpg" alt="conjuring">
+              </div>
+
+              <div class="latest-b-text">
+                <strong>Conjuring 2013</strong>
+                <p>Horror</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="card-container" data-title="Bunny" data-video="gif/bunny.mp4">
-        <div class="movie-title">Bunny</div>
-        <div class="card">
-          <img src="images/bunny.jpg" alt="Bunny">
-          <div class="movie-number">02</div>
-          <div class="popup-info">
-            <strong>Bunny</strong><br>
-            <div class="movie-release">Release Date: 2020</div>
-            <div class="movie-genre">Genre: Adventure, Comedy</div>
-            <div class="movie-duration">Duration: 1h 30m</div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card-container" data-title="Frozen" data-video="gif/frozen.mp4">
-        <div class="movie-title">Frozen</div>
-        <div class="card">
-          <img src="images/frozen.jpg" alt="Frozen">
-          <div class="movie-number">03</div>
-          <div class="popup-info">
-            <strong>Frozen</strong><br>
-            <div class="movie-release">Release Date: 2013</div>
-            <div class="movie-genre">Genre: Animation, Adventure</div>
-            <div class="movie-duration">Duration: 1h 42m</div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card-container" data-title="Veronica" data-video="conjuring.mp4">
-        <div class="movie-title">Veronica</div>
-        <div class="card">
-          <img src="images/veronica.jpg" alt="Veronica">
-          <div class="movie-number">04</div>
-          <div class="popup-info">
-            <strong>Veronica</strong><br>
-            <div class="movie-release">Release Date: 2017</div>
-            <div class="movie-genre">Genre: Horror, Mystery</div>
-            <div class="movie-duration">Duration: 1h 45m</div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card-container" data-title="One piece" data-video="one piece.mp4">
-        <div class="movie-title">One Piece</div>
-        <div class="card">
-          <img src="one.jpg" alt="One Piece">
-          <div class="movie-number">01</div>
-          <div class="popup-info">
-            <strong>One Piece</strong><br>
-            <div class="movie-release">Release Date: 1999</div>
-            <div class="movie-genre">Genre: Adventure, Fantasy</div>
-            <div class="movie-duration">Duration: 22 min per episode</div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card-container" data-title="Bunny" data-video="gif/bunny.mp4">
-        <div class="movie-title">Bunny</div>
-        <div class="card">
-          <img src="images/bunny.jpg" alt="Bunny">
-          <div class="movie-number">02</div>
-          <div class="popup-info">
-            <strong>Bunny</strong><br>
-            <div class="movie-release">Release Date: 2020</div>
-            <div class="movie-genre">Genre: Adventure, Comedy</div>
-            <div class="movie-duration">Duration: 1h 30m</div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card-container" data-title="Frozen" data-video="gif/frozen.mp4">
-        <div class="movie-title">Frozen</div>
-        <div class="card">
-          <img src="images/frozen.jpg" alt="Frozen">
-          <div class="movie-number">03</div>
-          <div class="popup-info">
-            <strong>Frozen</strong><br>
-            <div class="movie-release">Release Date: 2013</div>
-            <div class="movie-genre">Genre: Animation, Adventure</div>
-            <div class="movie-duration">Duration: 1h 42m</div>
-            
-          </div>
-        </div>
-      </div>
-      <div class="card-container" data-title="Veronica" data-video="conjuring.mp4">
-        <div class="movie-title">Veronica</div>
-        <div class="card">
-          <img src="images/veronica.jpg" alt="Veronica">
-          <div class="movie-number">04</div>
-          <div class="popup-info">
-            <strong>Veronica</strong><br>
-            <div class="movie-release">Release Date: 2017</div>
-            <div class="movie-genre">Genre: Horror, Mystery</div>
-            <div class="movie-duration">Duration: 1h 45m</div>
-            
-          </div>
-        </div>
     </div>
-</section>
-<div class="nav-container">
-      <button class="nav-button prev" onclick="scrollCarousel(-1)"></button>
-      <button class="nav-button next" onclick="scrollCarousel(1)"></button>
-    </div>
-</div>
+  </section>
