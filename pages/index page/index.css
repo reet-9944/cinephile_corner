@@ -523,6 +523,7 @@ html, body {
 .scroll-buttons button:hover {
     background-color: rgba(255, 255, 255, 1);
 }
+
 nav{
     display: flex;
     justify-content: space-around;
