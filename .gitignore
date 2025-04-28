@@ -1,6 +1,6 @@
 # Ignore image files (e.g., posters, thumbnails)
-*.png
-*.jpg
+# *.png
+# *.jpg
 *.jpeg
 *.gif
 *.bmp
