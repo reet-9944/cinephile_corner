@@ -69,3 +69,61 @@ a {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
+.movie-number {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #000;
+    color: #ff7eb9;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.movie-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #181818;
+    margin-right: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.7);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #ff7eb9;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ff7eb9;
+    color: #fff;
+    border-radius: 5px;
+}
