@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Movie Website Subscription Plans</title>
+    <style>
+        body {
+            background: #1b1b1f;
+            color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #e64a19;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px auto;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #2e2e33;
+            border-radius: 12px;
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .plan-name {
+            font-size: 26px;
+            font-weight: bold;
+            color: #e8e8e8;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ff5722;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .features li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn {
+            background: #ff5722;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e64a19;
+        }
+
+        .best-value {
+            background: #ffca28;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .best-value:hover::after {
+            content: "Most popular choice!";
+            background: #ffca28;
+            color: #333;
+            padding: 5px;
+            border-radius: 3px;
+            position: absolute;
+            top: 30px;
+            right: -50px;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        .extra-features {
+            font-size: 14px;
+            color: #b3b3b3;
+            margin-top: 10px;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+        }
+
+        .card:hover .extra-features {
+            max-height: 100px;
+            opacity: 1;
+        }
+
+        .info-section {
+            background: #1b1b1f;
+            padding: 40px 20px;
+            text-align: center;
+            color: #e0e0e0;
+            margin-top: 50px;
+        }
+
+        .info-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff5722;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        .info-box {
+            background: #29292d;
+            padding: 30px;
+            border-radius: 10px;
+            width: 220px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #ffca28;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .info-box:hover {
+            transform: translateY(-8px);
+            background: #ff5722;
+            color: white;
+        }
+
+        .info-box img {
+            width: 50px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .info-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: #d3d3d3;
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="back-button">Back</a>
+
+<h1>Choose Your Subscription Plan</h1>
+
+<div class="container">
+
+    <div class="card">
+        <div class="plan-name">Basic</div>
+        <div class="price">₹299/month</div>
+        <ul class="features">
+            <li>HD Streaming</li>
+            <li>1 Screen</li>
+            <li>Ads Included</li>
+        </ul>
+        <div class="extra-features">
+            <p>Limited offline downloads</p>
+            <p>Access to selected content</p>
+        </div>
+        <button class="btn" id="get-basic">Get Basic</button>
+    </div>
+
+    <div class="card">
+        <div class="plan-name">Premium <span class="best-value">Best Value</span></div>
+        <div class="price">₹499/month</div>
+        <ul class="features">
+            <li>Full HD Streaming</li>
+            <li>2 Screens</li>
+            <li>No Ads</li>
+            <li>Offline Downloads</li>
+        </ul>
+        <div class="extra-features">
+            <p>Priority customer support</p>
+            <p>Access to exclusive content</p>
+        </div>
+        <button class="btn" id="get-premium">Get Premium</button>
+    </div>
+
+    <div class="card">
+        <div class="plan-name">VIP</div>
+        <div class="price">₹799/month</div>
+        <ul class="features">
+            <li>4K Ultra HD Streaming</li>
+            <li>4 Screens</li>
+            <li>No Ads</li>
+            <li>Exclusive Content</li>
+            <li>Offline Downloads</li>
+        </ul>
+        <div class="extra-features">
+            <p>VIP customer support</p>
+            <p>First access to new releases</p>
+        </div>
+        <button class="btn" id="get-vip">Get VIP</button>
+    </div>
+</div>
+
+<div class="info-section">
+    <h2>Why Subscribe With Us?</h2>
+    <div class="info-container">
+        <div class="info-box">
+            <img src="https://cdn1.iconfinder.com/data/icons/business-1544/512/Secure_Payment.png" alt="Secure Payment">
+            <h3>Secure Payment</h3>
+            <p>Your transactions are protected with top-level encryption for your peace of mind.</p>
+        </div>
+        <div class="info-box">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/747/629/original/24-hours-call-center-icon-247-support-icon-sign-button-call-center-symbol-icon-template-free-vector.jpg" alt="24/7 Support">
+            <h3>24/7 Support</h3>
+            <p>Get assistance anytime with our dedicated customer support team.</p>
+        </div>
+        <div class="info-box">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cancel-8977132-7281836.png?f=webp" alt="Cancel Anytime">
+            <h3>Cancel Anytime</h3>
+            <p>No long-term contracts—enjoy flexibility and freedom in managing your subscription.</p>
+        </div>
+        <div class="info-box">
+            <img src="https://static.vecteezy.com/system/resources/previews/013/167/046/original/dollar-money-3d-illustration-free-png.png" alt="No Hidden Fees">
+            <h3>No Hidden Fees</h3>
+            <p>Transparent pricing with zero surprises on your bill.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("get-basic").addEventListener("click", function() {
+        alert("You have selected the Basic plan!");
+    });
+
+    document.getElementById("get-premium").addEventListener("click", function() {
+        alert("You have selected the Premium plan!");
+    });
+
+    document.getElementById("get-vip").addEventListener("click", function() {
+        alert("You have selected the VIP plan!");
+    });
+</script>
+
+</body>
+</html>
