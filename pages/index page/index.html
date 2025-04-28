@@ -399,3 +399,48 @@
       <div class="info-overlay"></div>
     </div>
   </section>
+
+
+  <div class="overlay" id="overlay" onclick="closeLogin(); closeSignup();"></div>
+  <div class="login-popup" id="loginPopup">
+    <span class="close" onclick="closePopups()" style="cursor: pointer;">&times;</span>
+    <h2>Log In</h2>
+    <input type="text" placeholder="Username" id="loginUsername" />
+    <input type="password" placeholder="Password" id="loginPassword" />
+    <button onclick="handleLogin()">Log In</button>
+    <div class="signup-option">
+      <p>New here? <a href="#" onclick="switchToSignup()">Sign Up</a></p>
+    </div>
+  </div>
+
+  <div class="signup-popup" id="signupBox">
+    <span class="close" onclick="closePopups()" style="cursor: pointer;">&times;</span>
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Username" id="signupUsername">
+    <input type="email" placeholder="Email" id="signupEmail">
+    <input type="password" placeholder="Password" id="signupPassword">
+    <input type="password" placeholder="Confirm Password" id="signupConfirmPassword">
+    <button onclick="handleSignup()">Sign Up</button>
+    <div class="signup-option">
+      <p>Already have an account? <a href="#" onclick="switchToLogin()">Log In</a></p>
+    </div>
+  </div>
+  <div class="overlay" id="signupOverlay" onclick="closeSignup()"></div>
+
+
+  <button id="theme-toggle" class="theme-toggle-btn">
+    <i class="fa fa-moon-o" id="theme-icon"></i>
+  </button>
+
+
+  <div id="theme-popup" class="theme-popup">
+    <span id="theme-popup-text"></span>
+  </div>
+
+
+  <script src="index.js"></script>
+
+  <footer>
+    <p>Powered by Cinephile Corner</p>
+    <p>&copy; 2024 Cinephile Corner. All Rights Reserved.</p>
+  </footer>
