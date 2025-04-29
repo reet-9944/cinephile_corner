@@ -2,12 +2,12 @@
 # *.png
 # *.jpg
 #*.jpeg
-*.gif
+# *.gif
 *.bmp
 *.tiff
 
 # Ignore video files (e.g., trailers, sample videos)
-*.mp4
+# *.mp4
 *.mov
 *.avi
 *.mkv
@@ -18,7 +18,7 @@
 *.tar.gz
 
 # Ignore node_modules (if you're using Node.js)
-node_modules/
+# node_modules/
 
 # Ignore log files
 *.log
@@ -28,7 +28,7 @@ node_modules/
 Thumbs.db
 
 # Ignore IDE-specific files (if using VS Code, IntelliJ, etc.)
-.vscode/
+# .vscode/
 .idea/
 
 # Ignore environment files (e.g., .env for storing sensitive data)
