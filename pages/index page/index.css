@@ -18,3 +18,32 @@ ul {
 a {
     text-decoration: none;
 }
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    padding: 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
