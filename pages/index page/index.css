@@ -814,3 +814,40 @@ body.dark-mode {
     color: white;
 }
 
+.movie-title,
+.popup-info {
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #main {
+    background-color: rgb(19, 17, 17);
+}
+
+body.dark-mode .showcase-heading {
+    color: white;
+}
+
+body.dark-mode .showcase-box img {
+    opacity: 0.8;
+}
+
+body.dark-mode #latest .latest-heading {
+    color: white;
+}
+
+body.dark-mode .movie-title {
+    color: white;
+}
+
+body.dark-mode .popup-info {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .movie-release,
+body.dark-mode .movie-genre,
+body.dark-mode .movie-duration {
+    color: lightgray;
+}
+
+
