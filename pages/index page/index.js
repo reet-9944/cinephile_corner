@@ -48,3 +48,25 @@ document.querySelectorAll('.movies-box').forEach(box => {
         infoOverlay.innerHTML = '';
     });
 });
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.classList.toggle('dark-mode');
+    const movieTitles = document.querySelectorAll('.movie-title');
+    const popupInfo = document.querySelectorAll('.popup-info');
+    
+    movieTitles.forEach((title) => title.classList.toggle('dark-mode'));
+    popupInfo.forEach((info) => info.classList.toggle('dark-mode'));
+
+    if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon-o');
+        themeIcon.classList.add('fa-sun-o');
+    } else {
+        themeIcon.classList.remove('fa-sun-o');
+        themeIcon.classList.add('fa-moon-o');
+    }
+
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+});
