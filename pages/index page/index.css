@@ -393,7 +393,7 @@ html, body {
     outline : none;
  }
  
- .signup-popup button {
+ .signup-popup button 
     width: 100%;
     padding: 12px;
     background-color: #1b3339;
