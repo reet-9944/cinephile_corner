@@ -118,7 +118,6 @@ function handleSignup() {
     const email = emailField.value;
     const password = passwordField.value;
     const confirmPassword = confirmPasswordField.value;
-  
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
