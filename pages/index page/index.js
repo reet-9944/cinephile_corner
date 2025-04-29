@@ -207,3 +207,28 @@ if (found) {
     noResultMessage.style.display = 'block';
 }
 
+document.addEventListener("DOMContentLoaded", () => { 
+    const movieBoxes = document.querySelectorAll(".movies-box, .card-container, .latest-box");
+    const videoModal = document.getElementById("videoModal"); 
+    const videoPlayer = document.getElementById("videoPlayer"); 
+    const videoInfo = document.getElementById("videoInfo"); 
+    const closeBtn = document.getElementById("closeBtn"); 
+
+    movieBoxes.forEach(box => {
+        box.addEventListener("click", () => {
+            const videoSrc = box.dataset.video; 
+            const videoTitle = box.dataset.title; 
+            const videoDescription = box.dataset.info || "No description available."; 
+
+            if (videoSrc) {
+                videoPlayer.src = videoSrc; 
+                videoPlayer.play(); 
+                videoInfo.innerHTML = `<h3>${videoTitle}</h3><p>${videoDescription}</p>`; 
+                videoModal.style.display = "block"; 
+            } else {
+                alert("Video not available!"); 
+            }
+            });
+        });
+    });
+
