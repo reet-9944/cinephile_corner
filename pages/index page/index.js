@@ -230,3 +230,16 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+    closeBtn.addEventListener("click", () => {
+        videoModal.style.display = "none"; 
+        videoPlayer.pause(); 
+        videoPlayer.src = ""; 
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === videoModal) {
+            videoModal.style.display = "none"; 
+            videoPlayer.pause(); 
+            videoPlayer.src = ""; 
+        }
+    });
