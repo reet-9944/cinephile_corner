@@ -120,7 +120,7 @@ function handleSignup() {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (username & email && password && confirmPassword) {
+    if (username  email && password && confirmPassword) {
         if (!emailRegex.test(email)) {
             alert('Please enter a valid email address.');
             return;
