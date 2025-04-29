@@ -118,7 +118,6 @@ function handleSignup() {
     const email = emailField.value;
     const password = passwordField.value;
     const confirmPassword = confirmPasswordField.value;
-  
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -178,6 +177,7 @@ function filterMovies() {
         document.body.classList.remove("searching");
     }
 }
+
 allSections.forEach(function(section) {
     const movieItems = section.querySelectorAll('[data-title]');
     let sectionHasVisibleItems = false;
@@ -206,3 +206,4 @@ if (found) {
 } else {
     noResultMessage.style.display = 'block';
 }
+
