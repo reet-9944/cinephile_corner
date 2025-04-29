@@ -780,3 +780,37 @@ color: #000;
 transition: color 0.3s ease;
 }
 
+body {
+    background-color: white;
+    color: black;
+}
+
+.movie-title {
+    color: black;
+}
+
+.popup-info {
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.theme-toggle-btn.dark-mode {
+    background-color: #0e0d0d;
+}
+
+.theme-toggle-btn.dark-mode i {
+    color: white;
+}
+
+.movie-title.dark-mode {
+    color: white;
+}
+
+.popup-info.dark-mode {
+    color: white;
+}
+
