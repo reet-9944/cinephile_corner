@@ -112,15 +112,17 @@ function handleSignup() {
     const usernameField = document.getElementById('signupUsername');
     const emailField = document.getElementById('signupEmail');
     const passwordField = document.getElementById('signupPassword');
+    const confirmPasswordField = document.getElementById('signupConfirmPassword');
 
     const username = usernameField.value;
     const email = emailField.value;
     const password = passwordField.value;
+    const confirmPassword = confirmPasswordField.value;
   
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (username  email && password && confirmPassword) {
+    if (username && email && password && confirmPassword) {
         if (!emailRegex.test(email)) {
             alert('Please enter a valid email address.');
             return;

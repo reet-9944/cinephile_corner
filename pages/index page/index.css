@@ -112,5 +112,218 @@ a {
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.navbar a {
+    color: #ff7eb9;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ff7eb9;
+    color: #fff;
+    border-radius: 5px;
+}
+
+body {
+    padding-top: 70px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.popup img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.popup .close-btn:hover {
+    color: #ff7eb9;
+}
+
+.popup-info {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .popup-info {
+    display: block;
+    opacity: 1;
+    bottom: 10px;
+}
+
+.movie-description {
+    font-size: 12px;
+    color: #ddd;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+.movie-genre,
+.movie-duration,
+.movie-release {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.nav-container {
+    position: absolute;
+    right: 10px;
+    top: 90%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+.nav-button {
+    background-color: #ed8cb8;
+    color: #fff;
+    border: 1px solid #ff4d89;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ff4d89;
+    color: #fff;
+}
+
+.nav-button::after {
+    content: '';
+    display: inline-block;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    transform: rotate(45deg);
+}
+
+.nav-button.prev::after {
+    transform: rotate(135deg);
+}
+
+.nav-button.next::after {
+    transform: rotate(-45deg);
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    border-radius: 16px;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: slideDown 0.6s ease-out;
+}
+
+.login-popup h2 {
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-popup input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid rgba(14, 14, 14, 0.2);
+    border-radius: 10px;
+    background: rgba(18, 17, 17, 0.1);
+    color: #fff;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.login-popup input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.login-popup button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1b3339;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: box-shadow 0.3s, background-color 0.3s, transform 0.2s;
+}
+
+.login-popup button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+    transform: translateY(-2px);
+}
+
 
 
