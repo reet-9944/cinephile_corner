@@ -1,38 +1,38 @@
-# # Ignore image files (e.g., posters, thumbnails)
-# # *.png
-# # *.jpg
-# #*.jpeg
-# *.gif
-# *.bmp
-# *.tiff
+# Ignore image files (e.g., posters, thumbnails)
+# *.png
+# *.jpg
+#*.jpeg
+*.gif
+*.bmp
+*.tiff
 
-# # Ignore video files (e.g., trailers, sample videos)
-# *.mp4
-# *.mov
-# *.avi
-# *.mkv
-# *.flv
+# Ignore video files (e.g., trailers, sample videos)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flv
 
-# # Ignore archive files (e.g., zip, tar)
-# *.zip
-# *.tar.gz
+# Ignore archive files (e.g., zip, tar)
+*.zip
+*.tar.gz
 
-# # Ignore node_modules (if you're using Node.js)
-# node_modules/
+# Ignore node_modules (if you're using Node.js)
+node_modules/
 
-# # Ignore log files
-# *.log
+# Ignore log files
+*.log
 
-# # Ignore OS-specific files (macOS/Windows)
-# .DS_Store
-# Thumbs.db
+# Ignore OS-specific files (macOS/Windows)
+.DS_Store
+Thumbs.db
 
-# # Ignore IDE-specific files (if using VS Code, IntelliJ, etc.)
-# .vscode/
-# .idea/
+# Ignore IDE-specific files (if using VS Code, IntelliJ, etc.)
+.vscode/
+.idea/
 
-# # Ignore environment files (e.g., .env for storing sensitive data)
-# .env
+# Ignore environment files (e.g., .env for storing sensitive data)
+.env
 
-# # ignore this link
-# .github/workflows/dynamic/pages/pages-build-deployment.yml
+# ignore this link
+.github/workflows/dynamic/pages/pages-build-deployment.yml

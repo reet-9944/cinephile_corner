@@ -62,7 +62,8 @@ Cinephile-Corner/
 ├── assets/
 │   ├── css/                # Main CSS files 
 │   ├── js/                 # Main JavaScript files
-│   ├── images/             # Image files (e.g.,images, gifs, png)
+│   ├── images/             # Image files (e.g.,images, png)
+│   ├── gifs/               # gif files 
 │   └── videos/             # Movie trailers, clips
 │
 ├── fontawesome/            # Font Awesome library for icons
