@@ -144,3 +144,71 @@ function handleSignup() {
         alert('Please fill out all fields.');
     }
 }
+
+function clearFields(formType) {
+    if (formType === 'login') {
+        document.getElementById('loginUsername').value = '';
+        clearPasswordField('loginPassword');
+    } else if (formType === 'signup') {
+        document.getElementById('signupUsername').value = '';
+        document.getElementById('signupEmail').value = '';
+        clearPasswordField('signupPassword');
+        clearPasswordField('signupConfirmPassword');
+    }
+}
+
+function clearPasswordField(fieldId) {
+    const field = document.getElementById(fieldId);
+    field.type = 'text';
+    field.value = '';
+    field.type = 'password';
+}
+
+function filterMovies() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const allSections = document.querySelectorAll('section');
+    const noResultMessage = document.getElementById('noResultMessage');
+    let found = false;
+
+    if (searchInput === "") {
+        location.reload();  
+        return;
+    }
+
+    if (searchInput !== "") {
+        document.body.classList.add("searching");
+    } else {
+        document.body.classList.remove("searching");
+    }
+
+
+    allSections.forEach(function(section) {
+        const movieItems = section.querySelectorAll('[data-title]');
+        let sectionHasVisibleItems = false;
+
+        movieItems.forEach(function(item) {
+            const movieTitle = item.getAttribute('data-title').toLowerCase();
+            if (movieTitle.includes(searchInput)) {
+                item.style.display = 'block';
+                sectionHasVisibleItems = true;
+                found = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (sectionHasVisibleItems) {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    });
+    document.body.classList.remove("searching");
+
+    if (found) {
+        noResultMessage.style.display = 'none';
+    } else {
+        noResultMessage.style.display = 'block';
+    }
+  
+}
