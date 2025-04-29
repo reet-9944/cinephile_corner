@@ -177,3 +177,33 @@ function filterMovies() {
         document.body.classList.remove("searching");
     }
 }
+
+allSections.forEach(function(section) {
+    const movieItems = section.querySelectorAll('[data-title]');
+    let sectionHasVisibleItems = false;
+
+    movieItems.forEach(function(item) {
+        const movieTitle = item.getAttribute('data-title').toLowerCase();
+        if (movieTitle.includes(searchInput)) {
+            item.style.display = 'block';
+            sectionHasVisibleItems = true;
+            found = true;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    if (sectionHasVisibleItems) {
+        section.style.display = 'block';
+    } else {
+        section.style.display = 'none';
+    }
+});
+document.body.classList.remove("searching");
+
+if (found) {
+    noResultMessage.style.display = 'none';
+} else {
+    noResultMessage.style.display = 'block';
+}
+
