@@ -170,6 +170,7 @@ function filterMovies() {
         location.reload();  
         return;
     }
+    //js file//
 
     if (searchInput !== "") {
         document.body.classList.add("searching");

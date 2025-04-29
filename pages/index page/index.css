@@ -850,12 +850,12 @@ body.dark-mode .movie-duration {
     color: lightgray;
 }
 
-n:fixed;
-    display: none;
-    bottom: 0;
-    align-items:center;
-    display: block;
-    justify-content: space-around;
+n:fixed{
+    display: none,
+    bottom 0,
+    align-item center,
+    display block,
+    justify-content space-around;
 }
 
 .footer-fixed {
