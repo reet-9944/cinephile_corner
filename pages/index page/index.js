@@ -72,3 +72,42 @@ themeToggle.addEventListener('click', () => {
 
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggle.classList.add('dark-mode');
+        
+        const movieTitles = document.querySelectorAll('.movie-title');
+        const popupInfo = document.querySelectorAll('.popup-info');
+        
+        movieTitles.forEach((title) => title.classList.add('dark-mode'));
+        popupInfo.forEach((info) => info.classList.add('dark-mode'));
+        themeIcon.classList.remove('fa-moon-o');
+        themeIcon.classList.add('fa-sun-o');
+    }
+});
+
+function handleLogin() {
+    const usernameField = document.getElementById('loginUsername');
+    const passwordField = document.getElementById('loginPassword');
+    
+    const username = usernameField.value.trim();
+    const password = passwordField.value.trim();
+
+    const storedUsername = localStorage.getItem('username');
+    const storedPassword = localStorage.getItem('password');
+
+    if (username && password) {
+        if (username === storedUsername && password === storedPassword) {
+            alert('Login successful!');
+            clearFields('login');
+        } else {
+            alert('Invalid username or password. Please try again.');
+            clearFields('login');
+        }
+    } else {
+        alert('Please enter your username and password.');
+    }
+}
