@@ -708,3 +708,75 @@ nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
     transform: rotate(-45deg);
     top: 0;
 }
+nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+nav .menu-btn{
+    display: none;
+}
+nav .menu-btn:checked ~ .menu{
+    display: block;
+}
+
+@media(max-width:680px){
+.showcase-box{
+    max-width: 300px;
+    height: 180px;
+    margin: 10px;
+}
+.latest-box{
+    width:190px;
+    margin: 20px 5px;
+}
+.movies-box{
+    flex-direction: row;
+    width:90%;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.movies-box a{
+    width:65%;
+}
+footer{
+    justify-content: space-between;
+    padding:0px 20px;
+    text-align: center;
+}
+}
+@media(max-width:440px){
+.movies-box a,.movies-box{
+    width: 100%;
+}
+.movies-box{
+    flex-direction: column;
+}
+.logo img{
+    height: 30px;
+}
+.search{
+    width: 90%;
+    height: 40px;
+}
+}
+
+.theme-toggle-btn {
+position: fixed;
+top: 5px;
+right: 15px;
+background-color: #fff;
+border: none;
+padding: 5px 5px;
+border-radius: 50%;
+cursor: pointer;
+z-index: 1000;
+font-size: 24px;
+height: 45px;
+width: 45px;
+transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn i {
+color: #000;
+transition: color 0.3s ease;
+}
+
