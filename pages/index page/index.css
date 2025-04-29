@@ -290,5 +290,84 @@ html, body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.login-popup input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid rgba(14, 14, 14, 0.2);
+    border-radius: 10px;
+    background: rgba(18, 17, 17, 0.1);
+    color: #fff;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.login-popup input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.login-popup button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1b3339;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: box-shadow 0.3s, background-color 0.3s, transform 0.2s;
+}
+
+.login-popup button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.login-popup input::placeholder {
+    color: rgb(18, 17, 17); 
+    opacity: 1; 
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 500;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+} 
+
+.signup-popup { 
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(15px);
+   padding : 30px;
+   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+   width: 350px;
+   border-radius: 16px;
+   z-index: 1000;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   animation: slideDown 0.6s ease-out;
+}
+
 
 
