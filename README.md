@@ -60,14 +60,14 @@ Here's a quick glance at the folder structure for easier navigation:
 Cinephile-Corner/
 │
 ├── assets/
-│   ├── css/                # CSS files (e.g., homepage.css)
-│   ├── js/                 # JavaScript files (e.g., homepage.js)
-│   ├── images/             # Image files (e.g., posters, banners)
+│   ├── css/                # Main CSS files 
+│   ├── js/                 # Main JavaScript files
+│   ├── images/             # Image files (e.g.,images, gifs, png)
 │   └── videos/             # Movie trailers, clips
 │
 ├── fontawesome/            # Font Awesome library for icons
-├── pages/                  # HTML pages (index.html, subscription.html, etc.)
-├── README.md               # This file
+├── pages/                  # HTML pages and their css files (index.html, index.css, subscription.html, etc.)
+├── README.md               # Project info
 └── .gitignore              # Ignored files for Git
 
   ```
@@ -106,5 +106,24 @@ We welcome contributions! If you'd like to improve Cinephile Corner or add new f
 5. Open a pull request.
 
 ---
+
+## 🧑‍💻 Visionary 🌟
+
+Hi! I'm **Reet** — a passionate developer currently learning and building cool web projects like Cinephile Corner 🎬  
+Feel free to check out my GitHub or reach out for collaborations!
+
+- GitHub: [reet-9944](https://github.com/reet-9944)
+- Email: reetu1614.becse24@chitkara.edu.in
+
+---
+
+## 👥 Contributors
+
+Special thanks to:
+
+- [pragtijasrai](https://github.com/pragtijasrai)
+- [punitdhundwal](https://github.com/punitdhundwal)
+- [priyanshu947](https://github.com/priyanshu947)
+
 
 ## Enjoy the show, and welcome to Cinephile Corner! 🎥🍿
