@@ -99,7 +99,7 @@ We welcome contributions! If you'd like to improve Cinephile Corner or add new f
 
 2. Create your branch (git checkout -b feature-name).
 
-3. Commit your changes (git commit -am 'Add some feature').
+3. Commit your changes (git commit -m 'Add some feature').
 
 4. Push to your branch (git push origin feature-name).
 
