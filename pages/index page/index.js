@@ -108,35 +108,3 @@ function handleLogin() {
         alert('Please enter your username and password.');
     }
 }
-function handleSignup() {
-    const usernameField = document.getElementById('signupUsername');
-    const emailField = document.getElementById('signupEmail');
-    const passwordField = document.getElementById('signupPassword');
-
-    const username = usernameField.value;
-    const email = emailField.value;
-    const password = passwordField.value;
-  
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (username & email && password && confirmPassword) {
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        if (password === confirmPassword) {
-            localStorage.setItem('username', username);
-            localStorage.setItem('password', password);
-            
-            alert('Signup successful!');
-            clearFields('signup');
-        } else {
-            alert('Passwords do not match.');
-            clearFields('signup');
-        }
-    } else {
-        alert('Please fill out all fields.');
-    }
-}
