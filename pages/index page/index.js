@@ -245,13 +245,4 @@ document.addEventListener("DOMContentLoaded", () => {
             videoPlayer.src = ""; 
         }
     });
-    body.dark-mode .popup-info {
-        background-color  #333;
-        color white,
-    }
-    body.dark-mode .movie-release,
-    body.dark-mode .movie-genre,
-    body.dark-mode .movie-duration {
-        color: light gray;
-    }
-
+    
