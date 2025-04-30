@@ -953,3 +953,26 @@ nav .menu-btn:checked ~ .menu{
     width: 45px;
     transition: background-color 0.3s ease;
 }
+
+.theme-toggle-btn i {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.movie-title {
+    color: black;
+}
+
+.popup-info {
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
