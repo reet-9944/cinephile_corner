@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,102 +213,108 @@
         }
     </style>
 </head>
+
 <body>
 
-<a href="../index page/index.html" class="back-button">Back</a>
+    <a href="../index page/index.html" class="back-button">Back</a>
 
-<h1>Choose Your Subscription Plan</h1>
+    <h1>Choose Your Subscription Plan</h1>
 
-<div class="container">
+    <div class="container">
 
-    <div class="card">
-        <div class="plan-name">Basic</div>
-        <div class="price">₹299/month</div>
-        <ul class="features">
-            <li>HD Streaming</li>
-            <li>1 Screen</li>
-            <li>Ads Included</li>
-        </ul>
-        <div class="extra-features">
-            <p>Limited offline downloads</p>
-            <p>Access to selected content</p>
+        <div class="card">
+            <div class="plan-name">Basic</div>
+            <div class="price">₹299/month</div>
+            <ul class="features">
+                <li>HD Streaming</li>
+                <li>1 Screen</li>
+                <li>Ads Included</li>
+            </ul>
+            <div class="extra-features">
+                <p>Limited offline downloads</p>
+                <p>Access to selected content</p>
+            </div>
+            <button class="btn" id="get-basic">Get Basic</button>
         </div>
-        <button class="btn" id="get-basic">Get Basic</button>
-    </div>
 
-    <div class="card">
-        <div class="plan-name">Premium <span class="best-value">Best Value</span></div>
-        <div class="price">₹499/month</div>
-        <ul class="features">
-            <li>Full HD Streaming</li>
-            <li>2 Screens</li>
-            <li>No Ads</li>
-            <li>Offline Downloads</li>
-        </ul>
-        <div class="extra-features">
-            <p>Priority customer support</p>
-            <p>Access to exclusive content</p>
+        <div class="card">
+            <div class="plan-name">Premium <span class="best-value">Best Value</span></div>
+            <div class="price">₹499/month</div>
+            <ul class="features">
+                <li>Full HD Streaming</li>
+                <li>2 Screens</li>
+                <li>No Ads</li>
+                <li>Offline Downloads</li>
+            </ul>
+            <div class="extra-features">
+                <p>Priority customer support</p>
+                <p>Access to exclusive content</p>
+            </div>
+            <button class="btn" id="get-premium">Get Premium</button>
         </div>
-        <button class="btn" id="get-premium">Get Premium</button>
-    </div>
 
-    <div class="card">
-        <div class="plan-name">VIP</div>
-        <div class="price">₹799/month</div>
-        <ul class="features">
-            <li>4K Ultra HD Streaming</li>
-            <li>4 Screens</li>
-            <li>No Ads</li>
-            <li>Exclusive Content</li>
-            <li>Offline Downloads</li>
-        </ul>
-        <div class="extra-features">
-            <p>VIP customer support</p>
-            <p>First access to new releases</p>
-        </div>
-        <button class="btn" id="get-vip">Get VIP</button>
-    </div>
-</div>
-
-<div class="info-section">
-    <h2>Why Subscribe With Us?</h2>
-    <div class="info-container">
-        <div class="info-box">
-            <img src="https://cdn1.iconfinder.com/data/icons/business-1544/512/Secure_Payment.png" alt="Secure Payment">
-            <h3>Secure Payment</h3>
-            <p>Your transactions are protected with top-level encryption for your peace of mind.</p>
-        </div>
-        <div class="info-box">
-            <img src="https://static.vecteezy.com/system/resources/previews/005/747/629/original/24-hours-call-center-icon-247-support-icon-sign-button-call-center-symbol-icon-template-free-vector.jpg" alt="24/7 Support">
-            <h3>24/7 Support</h3>
-            <p>Get assistance anytime with our dedicated customer support team.</p>
-        </div>
-        <div class="info-box">
-            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cancel-8977132-7281836.png?f=webp" alt="Cancel Anytime">
-            <h3>Cancel Anytime</h3>
-            <p>No long-term contracts—enjoy flexibility and freedom in managing your subscription.</p>
-        </div>
-        <div class="info-box">
-            <img src="https://static.vecteezy.com/system/resources/previews/013/167/046/original/dollar-money-3d-illustration-free-png.png" alt="No Hidden Fees">
-            <h3>No Hidden Fees</h3>
-            <p>Transparent pricing with zero surprises on your bill.</p>
+        <div class="card">
+            <div class="plan-name">VIP</div>
+            <div class="price">₹799/month</div>
+            <ul class="features">
+                <li>4K Ultra HD Streaming</li>
+                <li>4 Screens</li>
+                <li>No Ads</li>
+                <li>Exclusive Content</li>
+                <li>Offline Downloads</li>
+            </ul>
+            <div class="extra-features">
+                <p>VIP customer support</p>
+                <p>First access to new releases</p>
+            </div>
+            <button class="btn" id="get-vip">Get VIP</button>
         </div>
     </div>
-</div>
 
-<script>
-    document.getElementById("get-basic").addEventListener("click", function() {
-        alert("You have selected the Basic plan!");
-    });
+    <div class="info-section">
+        <h2>Why Subscribe With Us?</h2>
+        <div class="info-container">
+            <div class="info-box">
+                <img src="https://cdn1.iconfinder.com/data/icons/business-1544/512/Secure_Payment.png"
+                    alt="Secure Payment">
+                <h3>Secure Payment</h3>
+                <p>Your transactions are protected with top-level encryption for your peace of mind.</p>
+            </div>
+            <div class="info-box">
+                <img src="https://static.vecteezy.com/system/resources/previews/005/747/629/original/24-hours-call-center-icon-247-support-icon-sign-button-call-center-symbol-icon-template-free-vector.jpg"
+                    alt="24/7 Support">
+                <h3>24/7 Support</h3>
+                <p>Get assistance anytime with our dedicated customer support team.</p>
+            </div>
+            <div class="info-box">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cancel-8977132-7281836.png?f=webp"
+                    alt="Cancel Anytime">
+                <h3>Cancel Anytime</h3>
+                <p>No long-term contracts—enjoy flexibility and freedom in managing your subscription.</p>
+            </div>
+            <div class="info-box">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/167/046/original/dollar-money-3d-illustration-free-png.png"
+                    alt="No Hidden Fees">
+                <h3>No Hidden Fees</h3>
+                <p>Transparent pricing with zero surprises on your bill.</p>
+            </div>
+        </div>
+    </div>
 
-    document.getElementById("get-premium").addEventListener("click", function() {
-        alert("You have selected the Premium plan!");
-    });
+    <script>
+        document.getElementById("get-basic").addEventListener("click", function () {
+            alert("You have selected the Basic plan!");
+        });
 
-    document.getElementById("get-vip").addEventListener("click", function() {
-        alert("You have selected the VIP plan!");
-    });
-</script>
+        document.getElementById("get-premium").addEventListener("click", function () {
+            alert("You have selected the Premium plan!");
+        });
+
+        document.getElementById("get-vip").addEventListener("click", function () {
+            alert("You have selected the VIP plan!");
+        });
+    </script>
 
 </body>
+
 </html>

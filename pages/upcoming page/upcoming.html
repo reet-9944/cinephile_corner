@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,7 +119,7 @@
             text-decoration: none;
             transition: background 0.3s;
         }
-        
+
         .back-button:hover {
             background-color: #e64a19;
         }
@@ -128,13 +129,15 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-    </style>  
+    </style>
 </head>
+
 <body>
     <a href="../index page/index.html" class="back-button">Back</a>
     <div class="header">
@@ -150,7 +153,8 @@
                 <h3>Blood, White & Blue</h3>
                 <p>Release Year: 2025</p>
                 <p>Genre: Action, Drama</p>
-                <p>Synopsis: In a world torn apart by war, a soldier must choose between duty and family as he navigates through the chaos.</p>
+                <p>Synopsis: In a world torn apart by war, a soldier must choose between duty and family as he navigates
+                    through the chaos.</p>
                 <p>Cast: John Doe, Jane Smith, and Alex Brown</p>
             </div>
             <div class="icon-container">
@@ -167,7 +171,8 @@
                 <h3>The Land Before Time</h3>
                 <p>Release Year: 2025</p>
                 <p>Genre: Adventure, Animation</p>
-                <p>Synopsis: Join Littlefoot and his friends as they embark on a new adventure in a prehistoric world filled with danger and wonder.</p>
+                <p>Synopsis: Join Littlefoot and his friends as they embark on a new adventure in a prehistoric world
+                    filled with danger and wonder.</p>
                 <p>Cast: A mix of talented voice actors returning to their beloved roles.</p>
             </div>
             <div class="icon-container">
@@ -184,7 +189,8 @@
                 <h3>Armageddon</h3>
                 <p>Release Year: 2025</p>
                 <p>Genre: Sci-Fi, Action</p>
-                <p>Synopsis: As a massive asteroid threatens Earth, a team of unlikely heroes must come together to save humanity.</p>
+                <p>Synopsis: As a massive asteroid threatens Earth, a team of unlikely heroes must come together to save
+                    humanity.</p>
                 <p>Cast: Bruce Willis, Ben Affleck, and Liv Tyler.</p>
             </div>
             <div class="icon-container">
@@ -201,7 +207,8 @@
                 <h3>Apocalypse</h3>
                 <p>Release Year: 2025</p>
                 <p>Genre: Horror, Thriller</p>
-                <p>Synopsis: A group of friends find themselves trapped in a nightmare as they uncover a dark secret in an abandoned town.</p>
+                <p>Synopsis: A group of friends find themselves trapped in a nightmare as they uncover a dark secret in
+                    an abandoned town.</p>
                 <p>Cast: Emma Stone, Ryan Gosling, and Chris Pratt.</p>
             </div>
             <div class="icon-container">
@@ -212,27 +219,28 @@
         </div>
     </div>
     <script>
-       window.onload = function() {
-        const bookmarkIcons = document.querySelectorAll('.fa-bookmark');
-        const likeIcons = document.querySelectorAll('.fa-heart');
-        const saveIcons = document.querySelectorAll('.fa-save');
-        
-        bookmarkIcons.forEach(icon => {
-            icon.addEventListener('click', function() {
-                alert("Your movie is bookmarked!");
+        window.onload = function () {
+            const bookmarkIcons = document.querySelectorAll('.fa-bookmark');
+            const likeIcons = document.querySelectorAll('.fa-heart');
+            const saveIcons = document.querySelectorAll('.fa-save');
+
+            bookmarkIcons.forEach(icon => {
+                icon.addEventListener('click', function () {
+                    alert("Your movie is bookmarked!");
+                });
             });
-        });
-        likeIcons.forEach(icon => {
-            icon.addEventListener('click', function() {
-                alert("Thank you for liking!");
+            likeIcons.forEach(icon => {
+                icon.addEventListener('click', function () {
+                    alert("Thank you for liking!");
+                });
             });
-        });
-        saveIcons.forEach(icon => {
-            icon.addEventListener('click', function() {
-                alert("Your movie is saved!");
+            saveIcons.forEach(icon => {
+                icon.addEventListener('click', function () {
+                    alert("Your movie is saved!");
+                });
             });
-        });
-    };
+        };
     </script>
 </body>
+
 </html>

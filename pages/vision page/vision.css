@@ -114,12 +114,12 @@ nav .menu-btn {
 }
 
 
-#main{
+#main {
     padding-top: 80px;
     background-color: #ffffff;
 }
 
-.banner{
+.banner {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -128,71 +128,71 @@ nav .menu-btn {
     justify-content: space-between;
     align-items: center;
     background: url('images/beauty.jpg') no-repeat center center;
-    background:cover ;
+    background: cover;
     overflow: hidden;
     transition: 0.5s;
 }
 
-.banner::before{
+.banner::before {
     position: absolute;
     content: '';
     top: 0;
-    left:0 ;
-    right:0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width:100%;
+    width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.content{
+.content {
     position: relative;
-    max-width:550px;
-    display:none;
+    max-width: 550px;
+    display: none;
     visibility: hidden;
-    transform:scale(0);
+    transform: scale(0);
     transition: 0.5s;
 }
 
-.content.active{
-    display:block;
+.content.active {
+    display: block;
     visibility: visible;
-    transform:scale(1);
+    transform: scale(1);
     transition: 0.5s;
 }
 
-.movie-title{
-    max-width:250px;
+.movie-title {
+    max-width: 250px;
 }
 
-.banner .content h4{
-    color:rgba(255,255,255,0.5);
-    font-weight:400;
-    font-size:30px;
+.banner .content h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 30px;
 }
 
-.banner .content h4 span{
-    padding:0 10px;
-    border-right:1px solid rgba(255,255,255,0.5);
+.banner .content h4 span {
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.banner .content h4 span:first-child{
+.banner .content h4 span:first-child {
     padding-left: 0;
 }
 
-.banner .content h4 span:last-child{
-    border-right:none;
+.banner .content h4 span:last-child {
+    border-right: none;
 }
 
-.banner .content h4 span i{
+.banner .content h4 span i {
     background: var(--primary);
-    color:#ffffff;
-    padding:0 8px;
+    color: #ffffff;
+    padding: 0 8px;
     display: inline-block;
     border-radius: 2px;
 }
 
-.banner .content p{
+.banner .content p {
     font-size: len;
     font-weight: 300;
     line-height: 1.5em;
@@ -200,48 +200,48 @@ nav .menu-btn {
     margin: 10px 0 20px;
 }
 
-.banner .content .button{
+.banner .content .button {
     position: relative;
 }
 
-.banner .content .button a{
-    position:relative;
+.banner .content .button a {
+    position: relative;
     display: inline-block;
     margin-right: 10px;
-    background:var(--primary);
-    color:#ffffff;
-    padding:6px 20px;
-    text-decoration:none;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 6px 20px;
+    text-decoration: none;
     font-weight: 500;
     letter-spacing: 1 px;
-    text-transform:uppercase;
-    transition:0.5s;
-    cursor:pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .banner .content .button a:nth-child(2) {
-    background:rgba(0,0,0,0.5);
-    border:1px solid rgba(255,255,255,0.2);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .banner .content .button a:hover:nth-child(2) {
-    background:var(--primary);
+    background: var(--primary);
 }
 
-.banner .carousel-box{
+.banner .carousel-box {
     position: relative;
     min-width: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.2);
-    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-    border:1px solid rgba(235, 221, 221, 0.1);
-    backdrop-filter:blur(20px);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(235, 221, 221, 0.1);
+    backdrop-filter: blur(20px);
     border-radius: 10px;
 }
 
-.content h4 span { 
+.content h4 span {
     margin-right: 10px;
 }
 
@@ -288,15 +288,15 @@ nav .menu-btn {
     z-index: 10;
 }
 
-.carousel .carousel-item img{
+.carousel .carousel-item img {
     max-width: 235px;
     border-radius: 10px;
-    transform:translateX(8px) translateY(-100px);
+    transform: translateX(8px) translateY(-100px);
     object-fit: cover;
     object-position: center;
 }
 
-.play{
+.play {
     position: absolute;
     bottom: 50px;
     left: 100px;
@@ -309,31 +309,31 @@ nav .menu-btn {
     font-weight: 500;
     letter-spacing: 1px;
     font-size: 1.2em;
-    cursor:pointer !important;
+    cursor: pointer !important;
     transition: 0.3s;
 }
 
-.play i{
+.play i {
     margin-right: 10px;
     font-size: 40px;
     cursor: pointer !important;
 }
 
-.play:hover{
-    color:var(--primary);
+.play:hover {
+    color: var(--primary);
 }
 
-.sci{
+.sci {
     position: absolute;
     bottom: 50px;
     right: 100px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap:25px;
+    gap: 25px;
 }
 
-.sci a{
+.sci a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
@@ -341,86 +341,91 @@ nav .menu-btn {
     letter-spacing: 1px;
     font-size: 25px;
     transition: 0.3s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.sci a:hover{
-    color:var(--primary);
+.sci a:hover {
+    color: var(--primary);
 }
 
-.trailer{
+.trailer {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:100;
+    z-index: 100;
     backdrop-filter: blur(20px);
-   visibility: hidden;
-   opacity: 0;
-   transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
 }
 
-.trailer.active{
+.trailer.active {
     visibility: visible;
     opacity: 1;
 }
 
-.trailer video{
-    max-width:900px;
-    outline:none;
+.trailer video {
+    max-width: 900px;
+    outline: none;
 }
 
-nav .menu-btn{
+nav .menu-btn {
     display: none;
 }
 
-@media(max-width:1100px){
-    .nav-menu{
-       display: none;
+@media(max-width:1100px) {
+    .nav-menu {
+        display: none;
 
     }
-    nav{
+
+    nav {
         justify-content: space-between;
         height: 70px;
         padding: 0px 10px;
     }
-    nav .menu{
-       display: none;
+
+    nav .menu {
+        display: none;
         position: absolute;
         top: 65px;
         left: 0px;
         background: #fff;
-        border-bottom:4px solid #242424;
-        width:100%;
-        padding:0px;
-        margin:0px;
+        border-bottom: 4px solid #242424;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
     }
-    .menu li{
-        width:100%;
+
+    .menu li {
+        width: 100%;
     }
-    nav .menu li a{
+
+    nav .menu li a {
         width: 100%;
         height: 40px;
         align-items: center;
         margin: 0px;
-        padding:25px;
-        border:1px solid rgba(38,38,38,0.03);
+        padding: 25px;
+        border: 1px solid rgba(38, 38, 38, 0.03);
     }
- 
-    nav .menu-icon{
+
+    nav .menu-icon {
         cursor: pointer;
         float: right;
-        padding:28px 20px;
+        padding: 28px 20px;
         position: relative;
         user-select: none;
         display: block;
     }
-    nav .menu-icon .nav-icon{
+
+    nav .menu-icon .nav-icon {
         background-color: #333333;
         display: block;
         height: 2px;
@@ -428,8 +433,9 @@ nav .menu-btn{
         transition: background 0.2s ease-out;
         width: 18px;
     }
+
     nav .menu-icon .nav-icon:before,
-    nav .menu-icon .nav-icon:after{
+    nav .menu-icon .nav-icon:after {
         background: #333333;
         content: '';
         display: block;
@@ -438,97 +444,112 @@ nav .menu-btn{
         transition: all ease-out 0.2s;
         width: 100%;
     }
-    nav .menu-icon .nav-icon:before{
-        top:5px;
+
+    nav .menu-icon .nav-icon:before {
+        top: 5px;
     }
-    nav .menu-icon .nav-icon:after{
-        top:-5px;
+
+    nav .menu-icon .nav-icon:after {
+        top: -5px;
     }
-    nav .menu-btn:checked ~ .menu-icon .nav-icon{
+
+    nav .menu-btn:checked~.menu-icon .nav-icon {
         background: transparent;
- 
+
     }
-    nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+
+    nav .menu-btn:checked~.menu-icon .nav-icon:before {
         transform: rotate(-45deg);
         top: 0;
     }
-    nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+
+    nav .menu-btn:checked~.menu-icon .nav-icon:after {
         transform: rotate(45deg);
         top: 0;
     }
-    nav .menu-btn{
+
+    nav .menu-btn {
         display: none;
     }
-    nav .menu-btn:checked ~ .menu{
+
+    nav .menu-btn:checked~.menu {
         display: block;
     }
 
-    .banner{
+    .banner {
         flex-direction: column;
         padding: top 5rem;
         gap: 50px;
     }
 }
-@media(max-width:680px){
-    .nav-menu{
+
+@media(max-width:680px) {
+    .nav-menu {
         display: none;
     }
-    .showcase-box{
+
+    .showcase-box {
         max-width: 300px;
         height: 180px;
         margin: 10px;
     }
-    .latest-box{
-        width:190px;
+
+    .latest-box {
+        width: 190px;
         margin: 20px 5px;
     }
-    .movies-box{
+
+    .movies-box {
         flex-direction: column;
-        width:90%;
-        border: 1px solid rgba(0,0,0,0.2);
-    }
-    .movies-box a{
-        width:65%;
+        width: 90%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
     }
 
-    .banner{
+    .movies-box a {
+        width: 65%;
+    }
+
+    .banner {
         flex-direction: column;
         padding: top 5rem;
         gap: 50px;
     }
 }
 
-.close{
+.close {
     position: absolute;
     top: 30px;
     right: 30px;
     cursor: pointer;
-    filter:invert(1);
-    max-width:30px;
+    filter: invert(1);
+    max-width: 30px;
 }
 
-.logo-movie , .home-icon{
+.logo-movie,
+.home-icon {
     color: white;
     font-size: 25px;
 }
 
-.logo{
+.logo {
     gap: 50px;
     display: flex;
     align-items: center;
 }
 
-.nav-bar{
+.nav-bar {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.nav-bar ul{
+
+.nav-bar ul {
     display: flex;
     gap: 50px;
     align-items: center;
 }
-.navigation{
+
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
