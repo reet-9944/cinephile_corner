@@ -446,3 +446,54 @@ html,body {
     font-size: 20px;
     color: #aaa;
 }
+
+.close:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.signup-link {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.signup-link:hover {
+    color: #0056b3; 
+    text-decoration:none; 
+}
+
+.login-link {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.login-link:hover {
+    color: #0056b3; 
+    text-decoration: none; 
+}
+
+.movie-scroll {
+    position: relative;
+    padding: 20px 0;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    width: 100%;
+    scrollbar-width: none; 
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.scroll-container ul {
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+}
