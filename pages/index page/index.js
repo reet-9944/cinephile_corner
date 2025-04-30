@@ -56,7 +56,7 @@ themeToggle.addEventListener('click', () => {
     themeToggle.classList.toggle('dark-mode');
     const movieTitles = document.querySelectorAll('.movie-title');
     const popupInfo = document.querySelectorAll('.popup-info');
-    
+
     movieTitles.forEach((title) => title.classList.toggle('dark-mode'));
     popupInfo.forEach((info) => info.classList.toggle('dark-mode'));
 
@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
         themeToggle.classList.add('dark-mode');
-        
+
         const movieTitles = document.querySelectorAll('.movie-title');
         const popupInfo = document.querySelectorAll('.popup-info');
-        
+
         movieTitles.forEach((title) => title.classList.add('dark-mode'));
         popupInfo.forEach((info) => info.classList.add('dark-mode'));
         themeIcon.classList.remove('fa-moon-o');
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleLogin() {
     const usernameField = document.getElementById('loginUsername');
     const passwordField = document.getElementById('loginPassword');
-    
+
     const username = usernameField.value.trim();
     const password = passwordField.value.trim();
 
@@ -130,7 +130,7 @@ function handleSignup() {
         if (password === confirmPassword) {
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
-            
+
             alert('Signup successful!');
             clearFields('signup');
         } else {
@@ -167,7 +167,7 @@ function filterMovies() {
     let found = false;
 
     if (searchInput === "") {
-        location.reload();  
+        location.reload();
         return;
     }
 
@@ -176,73 +176,73 @@ function filterMovies() {
     } else {
         document.body.classList.remove("searching");
     }
-}
 
-allSections.forEach(function(section) {
-    const movieItems = section.querySelectorAll('[data-title]');
-    let sectionHasVisibleItems = false;
 
-    movieItems.forEach(function(item) {
-        const movieTitle = item.getAttribute('data-title').toLowerCase();
-        if (movieTitle.includes(searchInput)) {
-            item.style.display = 'block';
-            sectionHasVisibleItems = true;
-            found = true;
+    allSections.forEach(function (section) {
+        const movieItems = section.querySelectorAll('[data-title]');
+        let sectionHasVisibleItems = false;
+
+        movieItems.forEach(function (item) {
+            const movieTitle = item.getAttribute('data-title').toLowerCase();
+            if (movieTitle.includes(searchInput)) {
+                item.style.display = 'block';
+                sectionHasVisibleItems = true;
+                found = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (sectionHasVisibleItems) {
+            section.style.display = 'block';
         } else {
-            item.style.display = 'none';
+            section.style.display = 'none';
         }
     });
+    document.body.classList.remove("searching");
 
-    if (sectionHasVisibleItems) {
-        section.style.display = 'block';
+    if (found) {
+        noResultMessage.style.display = 'none';
     } else {
-        section.style.display = 'none';
+        noResultMessage.style.display = 'block';
     }
-});
-document.body.classList.remove("searching");
-
-if (found) {
-    noResultMessage.style.display = 'none';
-} else {
-    noResultMessage.style.display = 'block';
 }
 
-document.addEventListener("DOMContentLoaded", () => { 
+document.addEventListener("DOMContentLoaded", () => {
     const movieBoxes = document.querySelectorAll(".movies-box, .card-container, .latest-box");
-    const videoModal = document.getElementById("videoModal"); 
-    const videoPlayer = document.getElementById("videoPlayer"); 
-    const videoInfo = document.getElementById("videoInfo"); 
-    const closeBtn = document.getElementById("closeBtn"); 
+    const videoModal = document.getElementById("videoModal");
+    const videoPlayer = document.getElementById("videoPlayer");
+    const videoInfo = document.getElementById("videoInfo");
+    const closeBtn = document.getElementById("closeBtn");
 
     movieBoxes.forEach(box => {
         box.addEventListener("click", () => {
-            const videoSrc = box.dataset.video; 
-            const videoTitle = box.dataset.title; 
-            const videoDescription = box.dataset.info || "No description available."; 
+            const videoSrc = box.dataset.video;
+            const videoTitle = box.dataset.title;
+            const videoDescription = box.dataset.info || "No description available.";
 
             if (videoSrc) {
-                videoPlayer.src = videoSrc; 
-                videoPlayer.play(); 
-                videoInfo.innerHTML = `<h3>${videoTitle}</h3><p>${videoDescription}</p>`; 
-                videoModal.style.display = "block"; 
+                videoPlayer.src = videoSrc;
+                videoPlayer.play();
+                videoInfo.innerHTML = `<h3>${videoTitle}</h3><p>${videoDescription}</p>`;
+                videoModal.style.display = "block";
             } else {
-                alert("Video not available!"); 
+                alert("Video not available!");
             }
-            });
         });
     });
 
     closeBtn.addEventListener("click", () => {
-        videoModal.style.display = "none"; 
-        videoPlayer.pause(); 
-        videoPlayer.src = ""; 
+        videoModal.style.display = "none";
+        videoPlayer.pause();
+        videoPlayer.src = "";
     });
 
     window.addEventListener("click", (event) => {
         if (event.target === videoModal) {
-            videoModal.style.display = "none"; 
-            videoPlayer.pause(); 
-            videoPlayer.src = ""; 
+            videoModal.style.display = "none";
+            videoPlayer.pause();
+            videoPlayer.src = "";
         }
     });
-    
+});
