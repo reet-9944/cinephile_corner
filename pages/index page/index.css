@@ -1005,3 +1005,38 @@ body.dark-mode #main {
 body.dark-mode .showcase-heading {
     color: white;
 }
+
+body.dark-mode .showcase-box img {
+    opacity: 0.8;
+}
+
+body.dark-mode #latest .latest-heading {
+    color: white;
+}
+
+body.dark-mode .movie-title {
+    color: white;
+}
+
+body.dark-mode .popup-info {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .movie-release,
+body.dark-mode .movie-genre,
+body.dark-mode .movie-duration {
+    color: lightgray;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #fefcfc;
+    color: #fff;
+    align-items:center; 
+    justify-content: space-around;
+}
