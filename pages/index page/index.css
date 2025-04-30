@@ -700,3 +700,19 @@ nav .menu li a:hover{
     margin:20px 0;
     text-align: center;
 }
+
+.movies-box{
+    position:relative;
+    width:300px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 3px solid #292929;
+    transition: transform 0.3s ease,box-shadow 0.3 ease;
+}
