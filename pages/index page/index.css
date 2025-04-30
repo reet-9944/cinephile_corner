@@ -723,3 +723,88 @@ nav .menu li a:hover{
     position: relative;
     margin-bottom: 0px;
 }
+
+.movies-img img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.movies-box a{
+    text-align:center;
+    display: block;
+    font-weight: 600;
+    display: -webkit-box;
+    max-width: 80%;
+    line-clamp : vertical ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3a3a3a;
+    margin: 20px;
+}
+
+.movies-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all ease 0.2s;
+}
+
+#movies-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.quality{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translateX(-50%);
+    background-color:rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 5px 20px;
+    font-weight: 500;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.4);
+}
+
+.info-overlay {
+     position: absolute;
+     bottom: 0; left: 0; 
+     right: 0; background: rgba(0, 0, 0, 0.8); 
+     color: #fff; 
+     overflow: hidden; 
+     height: 0; 
+     width: 100%; 
+     transition: height 0.3s ease, 
+     padding 0.3s ease; 
+     display: flex; 
+     flex-direction: column; 
+     justify-content: center; 
+     align-items: center; 
+     padding: 0 10px; 
+     box-sizing: border-box; 
+     text-align: center; 
+} 
+.movies-box:hover 
+.info-overlay { 
+    height: 100px; 
+    padding: 10px; 
+} 
+.info-overlay p { 
+    margin: 5px 0; 
+    font-size: 14px; 
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
